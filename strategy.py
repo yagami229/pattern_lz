@@ -4,7 +4,6 @@ from abc import ABC, abstractmethod
 class NotificationSender(ABC):
     @abstractmethod
     async def send_message(self, text: str) -> str:
-        """Каждая стратегия должна реализовать этот метод асинхронно"""
         pass
 
 class EmailDelivery(NotificationSender):
