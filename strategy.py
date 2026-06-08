@@ -27,8 +27,6 @@ class NotificationService:
 
     @method.setter
     def method(self, new_method: NotificationSender):
-        if not isinstance(new_method, NotificationSender):
-            raise TypeError("Новый метод должен наследоваться от NotificationSender")
         self._method = new_method
 
     async def broadcast(self, message: str) -> str:
