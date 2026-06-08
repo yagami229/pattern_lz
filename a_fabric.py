@@ -4,18 +4,15 @@ from abc import ABC, abstractmethod
 class Button(ABC):
     @abstractmethod
     async def render(self) -> str:
-        """Отрисовка кнопки"""
         pass
 
 class Checkbox(ABC):
     @abstractmethod
     async def render(self) -> str:
-        """Отрисовка чекбокса"""
         pass
     
     @abstractmethod
     async def bind_to_button(self, button: Button) -> str:
-        """Привязка чекбокса к кнопке"""
         pass
 
 class LightButton(Button):
